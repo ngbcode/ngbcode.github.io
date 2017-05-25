@@ -18,8 +18,8 @@
   <md-toolbar class="md-display-2" layout-padding="">Nathaniel Brown</md-toolbar>
   <div layout="row">
     <md-content flex="30" id="about-tab">
-      <md-tabs md-dynamic-height="" md-border-bottom="" md-stretch-tabs="always">
-        <md-tab label="about">
+      <md-tabs md-dynamic-height="false" md-border-bottom="" md-stretch-tabs="always">
+        <md-tab label="about" id="about">
           <md-content class="md-padding">
             <h1 class="md-display-1">About Me</h1>
             <p>Software engineer in Atlanta, GA.</p>
@@ -30,7 +30,7 @@
     </md-content>
 
     <md-content flex="60" id="other-tabs">
-      <md-tabs md-dynamic-height="" md-border-bottom="" md-stretch-tabs="always">
+      <md-tabs md-dynamic-height="false" md-border-bottom="" md-stretch-tabs="always">
         <md-tab label="portfolio">
           <md-content class="md-padding" ng-controller="TabOne">
             <h1 class="md-display-1">Projects</h1>
@@ -58,7 +58,7 @@
     </md-content>
   </div>
   <div layout="" layout-align="center center"><span class="md-caption">&copy;2017 Nathaniel Brown</span></div>
-  
+
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
