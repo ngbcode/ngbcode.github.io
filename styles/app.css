@@ -1,0 +1,26 @@
+html {
+  background: #eee;
+}
+
+body {
+  line-height: 1.4;
+  width: 100%;
+}
+
+#about-tab {
+  min-width: 250px;
+  width: 35%;
+  max-width: 600px;
+  margin: 20px auto 20px 20px;
+  border-right: 1px grey solid;
+/*   float: left; */
+}
+
+#other-tabs {
+  min-width: 450px;
+  width: 60%;
+  max-width: 1000px;
+  margin: 20px 20px 20px auto;
+  border-left: 1px grey solid;
+/*   float: right;
+}
