@@ -6,5 +6,5 @@ angular.module("MyApp", ["ngMaterial"])
     .accentPalette('blue-grey');
   })
   .controller("TabOne", function($scope) {
-    $scope.title = "Count Upwards";
+    $scope.btnTitle = "Count Upwards";
   });
