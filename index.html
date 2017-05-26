@@ -1,6 +1,5 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
 <!-- <!doctype html>
 <html lang="en">
 
@@ -15,56 +14,60 @@ layout: default
 
   <link rel="stylesheet" href="styles/app.css">
 </head> -->
-<body ng-app="MyApp" ng-cloak>
-    <md-toolbar class="md-display-2" layout-padding="">Nathaniel Brown</md-toolbar>
-    <div layout="row">
-        <md-content flex="30" id="about-tab">
-            <md-tabs md-dynamic-height="false" md-border-bottom="" md-stretch-tabs="always">
-                <md-tab label="about" id="about">
-                    <md-content class="md-padding">
-                        <h1 class="md-display-1">About Me</h1>
-                        <p>I am a software engineer based out of Atlanta, GA. I love sports, food, and all sorts of entertainment.</p>
-                        <p>In my free time I like to play sports, workout, and of course code!</p>
-                        <p>For information on me and my experience, visit the <a href="/about">about page here</a>.</p>
-                    </md-content>
-                </md-tab>
-            </md-tabs>
-        </md-content>
+	{% include head.html %}
 
-        <md-content flex="60" id="other-tabs">
-            <md-tabs md-dynamic-height="false" md-border-bottom="" md-stretch-tabs="always">
-                <md-tab label="portfolio">
-                    <md-content class="md-padding" ng-controller="TabOne">
-                        <h1 class="md-display-1">Projects</h1>
-                        <p>I will edit this button &amp; page.</p>
-                        <p><md-button ng-click="count = count + 1" class="md-raised md-primary">{{btnTitle}}</md-button> count: {{count}}</p>
-                    </md-content>
-                </md-tab>
-                <md-tab label="blog">
-                    <md-content class="md-padding">
-                        <h1 class="md-display-1">Articles</h1>
-                        <p>I will edit this page too.</p>
-                        <p>With my own page information.</p>
-                        <p>And also some other information.</p>
-                    </md-content>
-                </md-tab>
-                <md-tab label="contact">
-                    <md-content class="md-padding">
-                        <h1 class="md-display-1">Contact Me</h1>
-                        <p>Integer turpis erat, porttitor vitae congue eu enim scelerisque, finibus commodo lectus.</p>
-                    </md-content>
-                </md-tab>
-            </md-tabs>
-        </md-content>
-    </div>
-    <div layout="" layout-align="center center"><span class="md-caption">&copy;2017 Nathaniel Brown</span></div>
+    <body ng-app="MyApp" ng-cloak>
+        <md-toolbar class="md-display-2" layout-padding="">Nathaniel Brown</md-toolbar>
+        <div layout="row">
+            <md-content flex="30" id="about-tab">
+                <md-tabs md-dynamic-height="false" md-border-bottom="" md-stretch-tabs="always">
+                    <md-tab label="about" id="about">
+                        <md-content class="md-padding">
+                            <h1 class="md-display-1">About Me</h1>
+                            <p>I am a software engineer based out of Atlanta, GA. I love sports, food, and all sorts of entertainment.</p>
+                            <p>In my free time I like to play sports, workout, and of course code!</p>
+                            <p>For information on me and my experience, visit the <a href="/about">about page here</a>.</p>
+                        </md-content>
+                    </md-tab>
+                </md-tabs>
+            </md-content>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+            <md-content flex="60" id="other-tabs">
+                <md-tabs md-dynamic-height="false" md-border-bottom="" md-stretch-tabs="always">
+                    <md-tab label="portfolio">
+                        <md-content class="md-padding" ng-controller="TabOne">
+                            <h1 class="md-display-1">Projects</h1>
+                            <p>I will edit this button &amp; page.</p>
+                            <p><md-button href="/projects" class="md-raised md-primary">{{btnTitle}}</md-button></p>
+                        </md-content>
+                    </md-tab>
+                    <md-tab label="blog">
+                        <md-content class="md-padding">
+                            <h1 class="md-display-1">Articles</h1>
+                            <p>I will edit this page too.</p>
+                            <p>With my own page information.</p>
+                            <p>And also some other information.</p>
+                        </md-content>
+                    </md-tab>
+                    <md-tab label="contact">
+                        <md-content class="md-padding">
+                            <h1 class="md-display-1">Contact Me</h1>
+                            <p>Integer turpis erat, porttitor vitae congue eu enim scelerisque, finibus commodo lectus.</p>
+                        </md-content>
+                    </md-tab>
+                </md-tabs>
+            </md-content>
+        </div>
+        <div layout="" layout-align="center center"><span class="md-caption">&copy;2017 Nathaniel Brown</span></div>
 
-    <script src="scripts/app.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
 
-</body>
+        <script src="scripts/app.js"></script>
+
+    </body>
+
+</html>

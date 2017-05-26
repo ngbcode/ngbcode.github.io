@@ -3,24 +3,31 @@
 
 	{% include head.html %}
 
-	<body ng-app="PostApp" ng-cloak>
+	<body ng-app="BlogApp" ng-cloak>
 	    <md-toolbar class="md-display-2" layout-padding="">{{ page.title }}</md-toolbar>
 	    <div layout="column">
 	        <md-content class="md-padding">
-				<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+				<article class="post">
 
-					<header class="post-header">
-						<h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-						<p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
-					</header>
+			        <div class="post-content">
+			            {{ content }}
 
-					<div class="post-content" itemprop="articleBody">
-						{{ content }}
-					</div>
+			            <ul class="post-list">
+			                {% for post in site.posts %}
+		                    <li>
+		                        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-					<span><a href="/projects">All Projects</a> -- <a href="/blog">All Posts</a></span>
+		                        <h2>
+		                            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+		                        </h2>
+		                    </li>
+			                {% endfor %}
+			            </ul>
 
-				</article>
+			            <p class="section-post-links">subscribe <a style="font-size:12px !important;" href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+			        </div>
+
+			    </article>
 	        </md-content>
 	    </div>
 	    <div layout="" layout-align="center center"><span class="md-caption">&copy;2017 Nathaniel Brown</span></div>
@@ -31,7 +38,7 @@
 	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
 	    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
 
-	    <script src="scripts/postapp.js"></script>
+	    <script src="scripts/blogapp.js"></script>
 
 	</body>
 

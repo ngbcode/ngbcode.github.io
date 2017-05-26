@@ -1,41 +1,45 @@
----
-layout: default
----
-<body ng-app="PortfolioApp" ng-cloak>
-    <md-toolbar class="md-display-2" layout-padding="">{{ page.title }}</md-toolbar>
-    <div layout="column">
-        <md-content class="md-padding">
-            <article class="post">
+<!DOCTYPE html>
+<html lang="en">
 
-                <div class="post-content">
-                    {{ content }}
+	{% include head.html %}
 
-                    <ul class="post-list">
-                        {% for post in site.categories.Projects %}
-                        <li>
-                            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+	<body ng-app="PortfolioApp" ng-cloak>
+	    <md-toolbar class="md-display-2" layout-padding="">{{ page.title }}</md-toolbar>
+	    <div layout="column">
+	        <md-content class="md-padding">
+	            <article class="post">
 
-                            <h2>
-                                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                            </h2>
-                        </li>
-                        {% endfor %}
-                    </ul>
+	                <div class="post-content">
+	                    {{ content }}
 
-                    <p class="section-post-links">subscribe <a style="font-size:12px !important;" href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-                </div>
-                <!--<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>-->
-            </article>
-        </md-content>
-    </div>
-    <div layout="" layout-align="center center"><span class="md-caption">&copy;2017 Nathaniel Brown</span></div>
+	                    <ul class="post-list">
+	                        {% for post in site.categories.Projects %}
+	                        <li>
+	                            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+	                            <h2>
+	                                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+	                            </h2>
+	                        </li>
+	                        {% endfor %}
+	                    </ul>
 
-    <script src="scripts/app.js"></script>
+	                    <p class="section-post-links">subscribe <a style="font-size:12px !important;" href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+	                </div>
+	                <!--<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>-->
+	            </article>
+	        </md-content>
+	    </div>
+	    <div layout="" layout-align="center center"><span class="md-caption">&copy;2017 Nathaniel Brown</span></div>
 
-</body>
+	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+	    <script src="scripts/portfolioapp.js"></script>
+
+	</body>
+
+</html>

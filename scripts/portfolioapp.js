@@ -1,10 +1,7 @@
-angular.module("MyApp", ["ngMaterial"])
+angular.module("PortfolioApp", ["ngMaterial"])
 
   .config(function($mdThemingProvider) {
   $mdThemingProvider.theme('default')
     .primaryPalette('blue')
     .accentPalette('blue-grey');
-  })
-  .controller("TabOne", function($scope) {
-    $scope.btnTitle = "Projects";
   });
