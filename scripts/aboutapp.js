@@ -1,4 +1,7 @@
-angular.module("AboutApp", ["ngMaterial"])
+angular.module("AboutApp", ["ngMaterial"],
+    function($interpolateProvider) {
+        $interpolateProvider.startSymbol('[[{').endSymbol('}]]');
+    })
 
   .config(function($mdThemingProvider) {
   $mdThemingProvider.theme('default')

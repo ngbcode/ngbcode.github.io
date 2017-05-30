@@ -38,7 +38,14 @@
 </head> -->
 
     <body ng-app="MyApp" ng-cloak>
-        <md-toolbar class="md-display-2" layout-padding="">Nathaniel Brown</md-toolbar>
+        <md-toolbar class="md-display-2" layout-padding="">
+			<div class="myLogo">
+	            <a class="site-title" href="{{ site.baseurl }}/">
+					<img src="/assets/favicon/android-chrome-192x192.png" alt="home">
+				</a>
+	        </div>
+			Nathaniel Brown
+		</md-toolbar>
         <div layout="row">
             <md-content flex="30" id="about-tab">
                 <md-tabs md-dynamic-height="false" md-border-bottom="" md-stretch-tabs="always">
@@ -59,15 +66,15 @@
                         <md-content class="md-padding" ng-controller="TabOne">
                             <h1 class="md-display-1">Projects</h1>
                             <p>I will edit this button &amp; page.</p>
-                            <p><md-button href="/projects" class="md-raised md-primary">{{btnTitle}}</md-button></p>
+                            <p><md-button href="/projects" class="md-raised md-primary">{{btnProj}}</md-button></p>
                         </md-content>
                     </md-tab>
                     <md-tab label="blog">
-                        <md-content class="md-padding">
+                        <md-content class="md-padding" ng-controller="TabTwo">
                             <h1 class="md-display-1">Articles</h1>
                             <p>I will edit this page too.</p>
                             <p>With my own page information.</p>
-                            <p>And also some other information.</p>
+							<p><md-button href="/blog" class="md-raised md-primary">{{btnBlog}}</md-button></p>
                         </md-content>
                     </md-tab>
                     <md-tab label="contact">

@@ -1,4 +1,7 @@
-angular.module("MyApp", ["ngMaterial"])
+angular.module("MyApp", ["ngMaterial"],
+    function($interpolateProvider) {
+        $interpolateProvider.startSymbol('[[{').endSymbol('}]]');
+    })
 
   .config(function($mdThemingProvider) {
   $mdThemingProvider.theme('default')
@@ -6,5 +9,8 @@ angular.module("MyApp", ["ngMaterial"])
     .accentPalette('blue-grey');
   })
   .controller("TabOne", function($scope) {
-    $scope.btnTitle = "Projects";
+    $scope.btnProj = "Projects";
+  })
+  .controller("TabTwo", function($scope) {
+      $scope.btnBlog = "Articles";
   });

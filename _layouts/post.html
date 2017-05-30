@@ -25,8 +25,8 @@
 
 	<body ng-app="PostApp" ng-cloak>
 	    <md-toolbar class="md-display-2" layout-padding="">{{ page.title }}</md-toolbar>
-	    <div layout="column">
-	        <md-content class="md-padding">
+		<div layout="column">
+			<md-content class="md-padding">
 				<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
 					<header class="post-header">
@@ -34,15 +34,15 @@
 						<p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
 					</header>
 
-					<div class="post-content" itemprop="articleBody">
+					<div itemprop="articleBody">
 						{{ content }}
 					</div>
 
 					<span><a href="/projects">All Projects</a> -- <a href="/blog">All Posts</a></span>
 
 				</article>
-	        </md-content>
-	    </div>
+			</md-content>
+		</div>
 	    <div layout="" layout-align="center center"><span class="md-caption">&copy;2017 Nathaniel Brown</span></div>
 
 	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>

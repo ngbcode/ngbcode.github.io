@@ -1,4 +1,7 @@
-angular.module("PortfolioApp", ["ngMaterial"])
+angular.module("PortfolioApp", ["ngMaterial"],
+    function($interpolateProvider) {
+        $interpolateProvider.startSymbol('[[{').endSymbol('}]]');
+    })
 
   .config(function($mdThemingProvider) {
   $mdThemingProvider.theme('default')

@@ -1,4 +1,7 @@
-angular.module("BlogApp", ["ngMaterial"])
+angular.module("BlogApp", ["ngMaterial"],
+    function($interpolateProvider) {
+        $interpolateProvider.startSymbol('[[{').endSymbol('}]]');
+    })
 
   .config(function($mdThemingProvider) {
   $mdThemingProvider.theme('default')
