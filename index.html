@@ -1,101 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+---
+layout: default
+---
 
-		<title>{% if page.title %}{{ site.title }} | {{ page.title | escape }}{% else %}{{ site.title }} | {{ site.name | escape }}{% endif %}</title>
-		<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-
-		<link rel="stylesheet" href="styles/app.css" type="text/css">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
-		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
-		<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-		<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
-
-		<!-- Links for favicon -->
-		<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
-		<link rel="icon" type="image/png" href="/assets/favicon/favicon-32x32.png" sizes="32x32">
-		<link rel="icon" type="image/png" href="/assets/favicon/favicon-16x16.png" sizes="16x16">
-		<link rel="manifest" href="/assets/favicon/manifest.json">
-		<link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
-		<meta name="theme-color" content="#ffffff">
-	</head>
-<!-- <!doctype html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-
-  <title>A little Angular site</title>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
-  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
-
-  <link rel="stylesheet" href="styles/app.css">
-</head> -->
-
-    <body ng-app="MyApp" ng-cloak>
-        <md-toolbar class="md-display-2" layout-padding="">
-			<div class="myLogo">
-	            <a class="site-title" href="{{ site.baseurl }}/">
-					<img src="/assets/favicon/android-chrome-192x192.png" alt="home">
-				</a>
-	        </div>
-			Nathaniel Brown
-		</md-toolbar>
-        <div layout="row">
-            <md-content flex="30" id="about-tab">
-                <md-tabs md-dynamic-height="false" md-border-bottom="" md-stretch-tabs="always">
-                    <md-tab label="about" id="about">
-                        <md-content class="md-padding">
-                            <h1 class="md-display-1">About Me</h1>
-                            <p>I am a software engineer based out of Atlanta, GA. I love sports, food, and all sorts of entertainment.</p>
-                            <p>In my free time I like to play sports, workout, and of course code!</p>
-                            <p>For information on me and my experience, visit the <a href="/about">about page here</a>.</p>
-                        </md-content>
-                    </md-tab>
-                </md-tabs>
-            </md-content>
-
-            <md-content flex="60" id="other-tabs">
-                <md-tabs md-dynamic-height="false" md-border-bottom="" md-stretch-tabs="always">
-                    <md-tab label="portfolio">
-                        <md-content class="md-padding" ng-controller="TabOne">
-                            <h1 class="md-display-1">Projects</h1>
-                            <p>I will edit this button &amp; page.</p>
-                            <p><md-button href="/projects" class="md-raised md-primary">{{btnProj}}</md-button></p>
-                        </md-content>
-                    </md-tab>
-                    <md-tab label="blog">
-                        <md-content class="md-padding" ng-controller="TabTwo">
-                            <h1 class="md-display-1">Articles</h1>
-                            <p>I will edit this page too.</p>
-                            <p>With my own page information.</p>
-							<p><md-button href="/blog" class="md-raised md-primary">{{btnBlog}}</md-button></p>
-                        </md-content>
-                    </md-tab>
-                    <md-tab label="contact">
-                        <md-content class="md-padding">
-                            <h1 class="md-display-1">Contact Me</h1>
-                            <p>Integer turpis erat, porttitor vitae congue eu enim scelerisque, finibus commodo lectus.</p>
-                        </md-content>
-                    </md-tab>
-                </md-tabs>
-            </md-content>
-        </div>
-        <div layout="" layout-align="center center"><span class="md-caption">&copy;2017 Nathaniel Brown</span></div>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
-
-        <script src="scripts/app.js"></script>
-
-    </body>
-
-</html>
+<header>
+    <h1>Nathaniel Brown</h1>
+    <h3>Software Engineer</h3>
+</header>
+<hr>
+<br>
+<nav>
+    <a href="/about" class="home-nav">About</a>
+    <a href="#" class="home-nav">Portfolio</a>
+    <a href="#" class="home-nav">Blog</a>
+</nav>
+<br>

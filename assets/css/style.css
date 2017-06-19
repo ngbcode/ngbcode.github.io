@@ -1,0 +1,56 @@
+html {
+    background: #bbb;
+}
+
+body {
+    line-height: 1.4;
+    width: 80%;
+    min-height: 600px;
+    min-width: 600px;
+    margin: 0 auto;
+    padding: 1em;
+    background: #bbb;
+    font-family: 'Droid Serif', serif;
+}
+
+header {
+    text-align: center;
+    padding: 2em;
+}
+
+a.home-nav {
+    display: block;
+    margin: 1em auto;
+    width: 7em;
+    height: 3em;
+    border: 4px solid black;
+    background: #9cbdde;
+    font-size: 3em;
+    text-decoration: none;
+    text-align: center;
+    line-height: 3em;
+}
+a.home-nav:hover {
+    background: #eee;
+    font-weight: bold;
+}
+a.nav {
+    display: inline-block;
+    margin: 0 auto;
+    width: 5em;
+    height: 2em;
+    border: 2px solid black;
+    background: #9cbdde;
+    text-decoration: none;
+    text-align: center;
+    line-height: 2em;
+}
+a.nav:hover {
+    background: #eee;
+    font-weight: bold;
+}
+
+.copy {
+    margin: auto;
+    text-align: center;
+}
