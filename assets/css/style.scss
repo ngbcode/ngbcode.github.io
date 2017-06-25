@@ -9,9 +9,9 @@ $font-weight: 400;
 $small-font-size:  $font-size * 0.875;
 $line-height: 1.4;
 
-$margin:      25%;
-$spacing:     10%;
-$spacing-small: 5%;
+$margin:      150px;
+$spacing:     96px;
+$spacing-small: 48px;
 
 $on-laptop:        800px;		//Originally 800px
 
@@ -36,6 +36,7 @@ html, body {
 }
 
 body {
+    margin: 0 auto;
     line-height: $line-height;
     font-family: $font-family;
     font-size: $font-size;
@@ -45,7 +46,6 @@ body {
     width: 80%;
     min-height: 450px;
     min-width: 450px;
-    max-width: 1000px;
     margin: auto;
     padding: $spacing-small;
 
@@ -61,7 +61,6 @@ header h3 { font-size: $font-size * 1.8; }
 a {
     text-decoration: none;
     &:hover {
-        color: #9ccdff;
         font-weight: bold;
     }
 }
@@ -107,10 +106,10 @@ a.nav {
 a.nav:hover { background: #eee; }
 
 .section {
-    width: 80%;
+    //width: 80%;
     min-width: 520px;
     margin: auto;
-    padding: $spacing-small * 0.5;
+    padding: $spacing-small;
     text-align: justify;
 }
 
