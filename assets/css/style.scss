@@ -48,29 +48,32 @@ body {
     min-width: 450px;
     margin: auto;
     padding: $spacing-small;
-
+    @include media-query($on-laptop) {
+        max-width: 600px;
+        font-size: $font-size * 2;
+        line-height: 175px;
+    }
 }
 
 header {
     text-align: center;
-    padding: $spacing-small;
+    padding-top: $spacing-small * 0.5;
+    padding-bottom: $spacing-small * 0.75;
 }
 header h1 { font-size: $font-size * 2.5; }
 header h3 { font-size: $font-size * 1.8; }
 
 a {
     text-decoration: none;
-    &:hover {
-        font-weight: bold;
-    }
+    &:hover { font-weight: bold; }
 }
 a.home-nav {
     display: block;
-    margin: 1em auto;
-    width: 40%;
+    margin: 20px auto;
+    width: 450px;
     height: 240px;
     border: 4px solid black;
-    border-radius: 5%;
+    border-radius: 10%;
     background: #9cbdde;
     font-size: $font-size * 3;
     text-decoration: none;
@@ -79,7 +82,9 @@ a.home-nav {
     text-transform: uppercase;
 
     @include media-query($on-laptop) {
+        width: 250px;
         height: 175px;
+        border-radius: 10%;
         font-size: $font-size * 2;
         line-height: 175px;
     }
@@ -99,6 +104,7 @@ a.nav {
     line-height: 40px;
 
     @include media-query($on-laptop) {
+        width: $spacing-small * 2;
         height: 30px;
         line-height: 30px;
     }
@@ -107,7 +113,7 @@ a.nav:hover { background: #eee; }
 
 .section {
     //width: 80%;
-    min-width: 520px;
+    min-width: 400px;
     margin: auto;
     padding: $spacing-small;
     text-align: justify;
