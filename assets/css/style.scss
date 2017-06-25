@@ -44,13 +44,13 @@ body {
 
 .main {
     width: 80%;
-    min-height: 450px;
-    min-width: 450px;
+    min-height: 600px;
+    min-width: 600px;
     margin: auto;
     padding: $spacing-small;
     @include media-query($on-laptop) {
-        max-width: 600px;
-        padding: 0;
+        width: 650px;
+        padding: $spacing-small * 0.75;
         font-size: $font-size * 1.5;
     }
 }
@@ -135,6 +135,7 @@ a.nav:hover { background: #eee; }
     margin: auto;
     text-align: center;
     @include media-query($on-laptop) {
+        padding-bottom: $spacing-small;
         font-size: $font-size * 0.7;
     }
 }
