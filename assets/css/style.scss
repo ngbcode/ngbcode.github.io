@@ -110,7 +110,7 @@ a.nav:hover { background: #eee; }
     width: 80%;
     min-width: 520px;
     margin: auto;
-    padding: $spacing-small;
+    padding: $spacing-small * 0.5;
     text-align: justify;
 }
 
