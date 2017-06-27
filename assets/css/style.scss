@@ -13,7 +13,8 @@ $margin:      150px;
 $spacing:     96px;
 $spacing-small: 48px;
 
-$on-laptop:        800px;		//Originally 800px
+$on-laptop: 800px;
+$on-phone:  400px;
 
 // Use media queries like this:
 // @include media-query($on-palm) {
@@ -51,6 +52,11 @@ body {
     @include media-query($on-laptop) {
         width: 650px;
         padding: $spacing-small * 0.75;
+        font-size: $font-size * 1.4;
+    }
+    @include media-query($on-phone) {
+        width: 320px;
+        padding: $spacing-small * 0.5;
         font-size: $font-size * 1.5;
     }
 }
@@ -62,12 +68,19 @@ header {
 }
 header h1 { font-size: $font-size * 2.5;
     @include media-query($on-laptop) {
-        font-size: $font-size * 1.8;
+        font-size: $font-size * 2;
     }
+    @include media-query($on-phone) {
+        font-size: $font-size * 2;
+    }
+
 }
 header h3 { font-size: $font-size * 1.8;
     @include media-query($on-laptop) {
-        font-size: $font-size * 1.25;
+        font-size: $font-size * 1.5;
+    }
+    @include media-query($on-phone) {
+        font-size: $font-size * 1.5;
     }
 }
 
@@ -81,13 +94,14 @@ a.home-nav {
     width: 450px;
     height: 240px;
     border: 4px solid black;
-    border-radius: 50%;
+    border-radius: 5%;
     background: #9cbdde;
     font-size: $font-size * 3;
     text-decoration: none;
     text-align: center;
     line-height: 240px;
     text-transform: uppercase;
+    color: black;
 
     @include media-query($on-laptop) {
         width: 250px;
@@ -110,12 +124,19 @@ a.nav {
     text-decoration: none;
     text-align: center;
     line-height: 40px;
+    color: black;
 
     @include media-query($on-laptop) {
         width: $spacing-small * 2;
         height: 30px;
         font-size: $font-size * 0.75;
         line-height: 30px;
+    }
+    @include media-query($on-phone) {
+        width: $spacing-small * 2.25;
+        height: 32px;
+        font-size: $font-size * 0.85;
+        line-height: 32px;
     }
 }
 a.nav:hover { background: #eee; }
@@ -127,7 +148,19 @@ a.nav:hover { background: #eee; }
     padding: $spacing-small;
     text-align: justify;
     @include media-query($on-laptop) {
+        padding: $spacing-small * 0.25;
+    }
+    @include media-query($on-phone) {
+        min-width: 260px;
         padding: 0;
+    }
+}
+.section h2 {
+    @@include media-query($on-laptop) {
+        font-size: $font-size * 1.75;
+    }
+    @include media-query($on-phone) {
+        font-size: $font-size * 1.75;
     }
 }
 
@@ -137,5 +170,9 @@ a.nav:hover { background: #eee; }
     @include media-query($on-laptop) {
         padding-bottom: $spacing-small * 0.75;
         font-size: $font-size * 0.7;
+    }
+    @include media-query($on-phone) {
+        padding-bottom: $spacing-small * 0.5;
+        font-size: $font-size * 0.85;
     }
 }
