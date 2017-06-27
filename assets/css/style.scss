@@ -156,7 +156,7 @@ a.nav:hover { background: #eee; }
     }
 }
 .section h2 {
-    @@include media-query($on-laptop) {
+    @include media-query($on-laptop) {
         font-size: $font-size * 1.75;
     }
     @include media-query($on-phone) {
