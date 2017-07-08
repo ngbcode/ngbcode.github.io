@@ -175,6 +175,26 @@ a.nav:hover { background: #eee; }
     }
 }
 
+.post-list {
+    list-style-type: none;
+}
+.post-list h2 {
+    margin: 0;
+}
+
+.icon {
+    > svg {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        vertical-align: middle;
+
+        path {
+            fill: black;
+        }
+    }
+}
+
 .copy {
     margin: auto;
     text-align: center;
