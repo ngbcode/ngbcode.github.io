@@ -181,12 +181,17 @@ a.nav:hover { background: #eee; }
 .post-list h2 {
     margin: 0;
 }
+.post-list hr {
+    width: 160px;
+}
 
 .icon {
     > svg {
         display: inline-block;
+        margin: 2px;
         width: 32px;
         height: 32px;
+        text-align: center;
         vertical-align: middle;
 
         path {
