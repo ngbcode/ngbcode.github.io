@@ -185,13 +185,17 @@ a.nav:hover { background: #eee; }
     width: 160px;
 }
 
+#social-media {
+    width: 120px;
+    margin: 0 auto;
+}
 .icon {
     > svg {
         display: inline-block;
-        margin: 2px;
+        margin-left: 5px;
+        margin-right: 5px;
         width: 32px;
         height: 32px;
-        text-align: center;
         vertical-align: middle;
 
         path {
