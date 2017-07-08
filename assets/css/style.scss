@@ -177,23 +177,24 @@ a.nav:hover { background: #eee; }
 
 .post-list {
     list-style-type: none;
+    text-align: center;
 }
 .post-list h2 {
     margin: 0;
 }
 .post-list hr {
-    width: 160px;
+    width: 240px;
 }
 
 #social-media {
-    width: 120px;
     margin: 0 auto;
+    text-align: center;
 }
 .icon {
     > svg {
         display: inline-block;
-        margin-left: 5px;
-        margin-right: 5px;
+        margin-left: 2px;
+        margin-right: 2px;
         width: 32px;
         height: 32px;
         vertical-align: middle;
