@@ -16,7 +16,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: Mr_Innovative
 github_username:  ngbrown11
-linkedin_username: Nathaniel Brown
+linkedin_username: nathaniel-brown-597465b2
 stackoverflow_username: Nate
 excerpt_separator: <!--sep-->
 defaults: # YAML default variables
