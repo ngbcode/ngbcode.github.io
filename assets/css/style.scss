@@ -186,8 +186,12 @@ a.nav:hover { background: #eee; }
     width: 240px;
 }
 
+#tf {
+    margin: auto;
+    text-align: center;
+}
 #social-media {
-    margin: 0 auto;
+    margin: 5px auto;
     text-align: center;
 }
 .icon {
@@ -195,8 +199,8 @@ a.nav:hover { background: #eee; }
         display: inline-block;
         margin-left: 2px;
         margin-right: 2px;
-        width: 16px;
-        height: 16px;
+        width: 24px;
+        height: 24px;
         vertical-align: middle;
 
         path {
